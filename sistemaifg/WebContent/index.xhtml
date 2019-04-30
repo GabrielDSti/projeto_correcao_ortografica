@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>index</title>
+
+</h:head>
+
+<h:body>
+
+	<h:form>
+		<div class="ui-g">
+			<div class="ui-g-12 ui-md-3">
+				<!-- <p:staticMessage severity="info" summary="#{loginBean.forneceRegistrosUserLogado}" detail="" /> -->
+			</div>
+		</div>
+		<p:growl id="messages" />
+		<p:menubar>
+			<p:submenu label="File" icon="pi pi-file">
+			</p:submenu>
+		</p:menubar>
+		<p:inputText id="depCode" disabled="true"
+			value="#{loginBean.forneceRegistrosUserLogado}" size="56"
+			/>
+	</h:form>
+</h:body>
+
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+ 
+</h:head>
+<h:body>
+<h:form>
+    <p:growl id="msg" showDetail="true" escape="false" />
+     
+    <h3 style="margin-top: 0">Basic PickList</h3>
+    <p:pickList id="pickList" value="#{pickListBean.cidades}" var="cidades" itemLabel="#{cidades}" itemValue="#{cidades}" />
+     
+    <p:commandButton id="citySubmit" value="Submit" update="pickList"  style="margin-top:5px" />
+</h:form>
+
+<!-- <p:dialog modal="true" showEffect="fade" hideEffect="fade" widgetVar="cityDialog">
+        <h:panelGrid id="displayCities" columns="2">
+            <h:outputText value="Source: " style="font-weight:bold" />
+             <ui:repeat value="#{pickListView.cities.source}" var="item">
+                <h:outputText value="#{item}" style="margin-right:5px" />
+            </ui:repeat>
+ 
+            <h:outputText value="Target: " style="font-weight:bold" />
+            <ui:repeat value="#{pickListView.cities.target}" var="item">
+                <h:outputText value="#{item}" style="margin-right:5px" />
+            </ui:repeat>
+        </h:panelGrid>
+    </p:dialog> --> 
+</h:body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<h:head>
+	<title>Login</title>
+
+
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:growl id="growl" showDetail="true" sticky="true"  />
+		<p:panel header="Login">
+		<h:panelGrid columns="2" cellpadding="5" width="10%">
+			<h:outputLabel value="Login:" for="login"  />
+			<h:inputText id="login" value="#{loginBean.login}" />
+			
+			<h:outputLabel value="Senha:" for="senha" />
+			<h:inputSecret id="senha" value="#{loginBean.senha}" />
+			</h:panelGrid>
+			<h:commandButton value="Acessar" action="#{loginBean.verificaUser}"
+				id="buttonLogar" style="margin-right:50px;" icon="ui-icon-unlocked"
+				title="Logar"/>
+				
+				
+		</p:panel>
+	</h:form>
+</h:body>
+
+</html>
